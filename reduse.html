@@ -8,9 +8,17 @@
 <body>
     
 <script>
-    let abr=[1,2,3]
-    let f=abr.reduce((a,i)=>a+i,0)
-    console.log(f);
+    // let abr=[1,2,3]
+    // let f=abr.reduce((a,i)=>a*i,2)
+    // console.log(f);
+
+    let arr =[10,13,29,40];
+
+    let a = arr.reduce((sum,currentValue)=>{
+        console.log("SUM",sum);
+        console.log("CurrentValue",currentValue);
+        return sum+currentValue
+    },0)
     
 </script>
 

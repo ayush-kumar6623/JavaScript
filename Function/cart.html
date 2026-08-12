@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function order(cart,payment)
+        {
+            console.log("Order Completed! Waiting for psyment ",cart);
+            payment()
+            console.log("Done");
+            
+        }
+        function payment()
+        {
+            console.log("payment Done");
+            
+        }
+        order("pen",payment)
+    </script>
+</body>
+</html>

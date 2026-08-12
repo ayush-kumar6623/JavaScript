@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let marks={
+        hindi:90,
+        english:80,
+        math:70,
+
+    }
+    let total=0;
+
+    // let h =marks["hindi"]
+    // let e =marks["english"]
+    // let m =marks["math"]
+    // console.log(h+e+m);
+
+    for(subject in marks)
+    {
+        console.log(marks[subject]);
+        total+=marks[subject]
+        
+    }
+    console.log(total);
+    
+</script>
+
+</body>
+</html>

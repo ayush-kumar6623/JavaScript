@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    let num1 = Number(prompt("Enter First Number:"));
+let num2 = Number(prompt("Enter Second Number:"));
+let operator = prompt("Enter Operator (+, -, *, %):");
+
+let result;
+
+switch (operator) {
+    case "+":
+        result = num1 + num2;
+        break;
+
+    case "-":
+        result = num1 - num2;
+        break;
+
+    case "*":
+        result = num1 * num2;
+        break;
+
+    case "%":
+        result = num1 % num2;
+        break;
+}
+
+console.log("Result = " +result);
+
+</script>
+
+</body>
+</html>

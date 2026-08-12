@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+let sallery = Number(prompt("Enter user's salary:-"));
+let tax = 0;
+
+if (sallery <= 500000) {
+    tax = 0;
+} else if (sallery <= 700000) {
+    tax = sallery * 0.20;
+} else if (sallery <= 1000000) {
+    tax = sallery * 0.28;
+} else {
+    tax = sallery * 0.33;
+}
+
+
+console.log(tax);
+</script>
+
+</body>
+</html>

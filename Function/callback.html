@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function payment(amount,callback)
+        {
+            alert("your payment of "+ amount+ "completed")
+            callback();
+
+        }
+        function demo(callback)
+        {
+            alert("final complete")
+            callback();
+
+        }
+        function sendMassage()
+        {
+            alert("Sms Sent to user")
+        }
+        payment(3000,sendMassage)
+        demo(sendMassage)
+    </script>
+</body>
+</html>

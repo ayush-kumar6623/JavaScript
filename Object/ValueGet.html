@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let obj={
+            name:"ayush",
+            age:"21",
+            Gender:"Male",
+        skills:{
+            html:"Hyper Text markup Lang ",
+            css:"Cascading style sheet",
+            js:"Java script"
+        }
+        }
+        obj.city="Ghazipur"
+        obj.name="Ashu"
+
+        console.log(obj?.name);
+        console.log(obj['name']);
+        // console.log(obj?.city);
+        console.log(obj?.skills?.html);
+        console.log(obj?.skills?.css);
+    
+        console.log(Object.keys(obj));
+        console.log(Object.values(obj));
+        console.log(Object.entries(obj));
+        console.log(obj);
+
+
+        let obj1={
+            city:"Lucknow",
+        }
+        console.log(Object.assign({},obj,obj1));
+        
+        let obj2={
+            name:"Amit",
+            age:24,
+            gender:"male"
+        }
+
+        let{name,age,gender}=obj2
+
+        console.log(name);
+        console.log(age);
+        console.log(gender);
+
+        
+    </script>
+    
+</body>
+</html>

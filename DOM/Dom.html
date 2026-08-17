@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="a">Hello</h1>
+    <span class="b">span 1</span>
+    <span class="b">span 2</span>
+    <span class="b">span 3</span>
+    <span class="b">span 4</span>
+
+    <b>bold 1</b>
+    <b>bold 2</b>
+    <b>bold 3</b>
+
+
+    <script>
+        // Id selector
+        let A=document.getElementById("a")
+        console.log(A);
+        //class selector
+        let B= document.getElementsByClassName("b")
+        console.log(B[3]);
+
+        //tag name salactor
+        let tag=document.getElementsByTagName("b")
+        console.log(tag);
+        console.log(tag[1]);
+        
+        //Query selector
+        
+        let qr =document.querySelector('.b')
+        console.log(qr);
+        let qr1 =document.querySelectorAll('.b')
+        console.log(qr1);
+        
+
+
+    </script>
+</body>
+</html>

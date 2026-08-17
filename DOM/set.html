@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="a">Hello coders</h1>
+    <p class="b">
+        Hello
+        <span style="display: none;">Ved</span>
+        welcome
+    </p>
+
+    <p id="c">
+        Hello
+    </p>
+
+    <script>
+        let a=document.getElementById("a")
+        console.log(a.innerText);  //inner text jo visiblae code ko show krta aur use update aur change kr sakte hain
+        console.log(a.textContent="ayush"); //textContent jo visiblae code ko ya unvisible code ko  show krta aur use update aur change kr sakte hain
+
+        let b=document.querySelector(".b")
+        console.log(b.innerText);
+        console.log(a.textContent);
+        console.log(a.textContent="Ved New");
+        let c =document.querySelector("#c")
+        console.log(c.innerHTML="<h1>hellow</h1>");
+        
+        
+
+
+        
+    </script>
+</body>
+</html>

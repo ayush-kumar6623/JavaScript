@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button
+        {
+            text-align: center;
+            border: 20px;
+        }
+        #box{
+            background-color: red;
+            height: 300px;
+            width: 400px;
+        }        
+        #red{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color: red;
+            margin: 20px;
+        }
+        #green{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color: green;
+            margin: 20px;
+        }
+        #pink{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color:pink;
+            margin: 20px;
+        }
+        #blue{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color:blue;
+            margin: 20px;
+        }
+        #yellow{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color:yellow;
+            margin: 20px;
+        }
+        #orange{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color:orange;
+            margin: 20px;
+        }
+        #black{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color:black;
+            margin: 20px;
+        }
+        #lightGreen{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color:lightgreen;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+        <div id="box"></div>
+    </center>
+    <div id="button">
+        <button type="button" onclick="red()" id="red"></button>
+        <button type="button" onclick="green()" id="green"></button>
+        <button type="button" onclick="pink()" id="pink"></button>
+        <button type="button" onclick="blue()" id="blue"></button>
+        <button type="button" onclick="yellow()" id="yellow"></button>
+        <button type="button" onclick="orange()" id="orange"></button>
+        <button type="button" onclick="black()" id="black"></button>
+        <button type="button" onclick="lightGreen()" id="lightGreen"></button>
+    </div>
+
+    <script>
+        function red(){
+            document.getElementById("box").style.backgroundColor="red"
+        }
+        function green(){
+            document.getElementById("box").style.backgroundColor="green"
+        }
+        function pink(){
+            document.getElementById("box").style.backgroundColor="pink"
+        }
+        function blue(){
+            document.getElementById("box").style.backgroundColor="blue"
+        }
+        function yellow(){
+            document.getElementById("box").style.backgroundColor="yellow"
+        }
+        function orange(){
+            document.getElementById("box").style.backgroundColor="orange"
+        }
+        function black(){
+            document.getElementById("box").style.backgroundColor="black"
+        }
+        function lightGreen(){
+            document.getElementById("box").style.backgroundColor="lightgreen"
+        }
+    </script>
+</body>
+</html>

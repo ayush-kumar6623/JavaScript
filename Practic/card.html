@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>card</title>
+    <title>Card</title>
+
     <style>
-        .card{
-            width: 200px;
-            height: 200px;
+        .card {
+            width: 220px;
+            min-height: 280px;
             border: 2px solid black;
             display: inline-block;
-            margin: 10px;
+            margin: 15px;
             border-radius: 10px;
-            box-shadow: 2px 4px 8px ;
-            transition: 1s;
-            
-            
-
+            overflow: hidden;
+            box-shadow: 2px 4px 8px gray;
+            transition: 0.3s;
+            vertical-align: top;
+            background-color: white;
         }
-        img{
+
+        .card:hover {
+            box-shadow: 4px 12px 20px red;
+            transform: translateY(-5px);
+        }
+
+        .card img {
             width: 100%;
-            border-radius: 5px 5px 0px 0px;
+            height: 180px;
+            object-fit: cover;
+            display: block;
         }
-        desc{
-            padding: 0 2px 0 2px;
+        .card h3  {
+            padding-left:20px;
         }
-        .card:hover{
-            box-shadow: 4px 18px 16px red;
-
-        }
-
-
+        
 
     </style>
 </head>
+
 <body>
-    <div id="products">
-    
-    </div>
+
+    <div id="products"></div>
 
     <script src="card.js"></script>
+
 </body>
 </html>

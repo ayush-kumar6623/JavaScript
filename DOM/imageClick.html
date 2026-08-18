@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bigImage {
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+        }
+
+        .img>img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .thumnail {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* border: 1px solid; */
+        }
+
+        .thumnail>img {
+            height: 120px;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img">
+        <img id="bigImage">
+        <div class="thumnail">
+        </div>
+    </div>
+
+    <script>
+        let images = [
+            'img2.jpg',
+            '3].webp',
+            'img1.jpg',
+        ]
+        let bigImage = document.getElementById("bigImage")
+        bigImage.setAttribute("src", images[0])
+        let t = document.querySelector(".thumnail")
+        
+        images.forEach((image) => {
+            let img = document.createElement("img")
+            img.setAttribute('src', image)
+
+            img.onclick = () => {
+                bigImage.setAttribute('src', image)
+            }
+            img.onmouseenter = () => {
+                bigImage.setAttribute('src', image)
+            }
+            t.appendChild(img)
+        })
+    </script>
+</body>
+
+</html>

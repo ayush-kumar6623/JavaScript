@@ -15,6 +15,20 @@ boxId.style.height="100px"
 
 //Attribute change krna 
 
-let NewPhoto=document.getElementById("photo")
-NewPhoto.src="earBuds.webp"
+let NewPhoto=document.getElementById("Oldphoto")
+NewPhoto.src="earBuds.webp" //HTML attributes ko JavaScript se change kar sakte hain.
+
+//Get Attribute
+let image=document.getElementById("Oldphoto")
+console.log(image.getAttribute("src"));
+
+//setAttribute
+
+let link =document.querySelector("a")
+link.setAttribute("href","https://www.youtube.com/")
+
+//removeAttribute
+
+link.removeAttribute("href")
+
 

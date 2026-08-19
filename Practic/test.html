@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 200px;
+            width: 300px;
+            background-color: red;
+        }
+        #dv{
+            text-align: center;
+            border: 20px;
+        }
+        #red{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            border-radius: 50%;
+            margin: 20px;
+        }
+         #green{
+            height: 50px;
+            width: 50px;
+            background-color:green;
+            border-radius: 50%;
+            text-align: center;
+            margin: 20px;
+        }
+         #yellow{
+            height: 50px;
+            width: 50px;
+            background-color:yellow;
+            border-radius: 50%;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <center>
+        <div id="box"></div>
+    </center>
+        <div id="dv">
+            <button type="button" onclick="red()" id="red"></button>
+            <button type="button" onclick="green()" id="green"></button>
+            <button type="button" onclick="yellow()" id="yellow"></button>
+        </div>
+
+        <script>
+            function red(){
+                document.getElementById("box").style.backgroundColor="red"
+            }
+            function green(){
+                document.getElementById("box").style.backgroundColor="green"
+            }
+            function yellow(){
+                document.getElementById("box").style.backgroundColor="yellow"
+            }
+        </script>
+
+    
+</body>
+</html>

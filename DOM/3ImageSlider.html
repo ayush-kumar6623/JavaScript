@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Image Slider</title>
+
+    <style>
+        .slider {
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        button {
+            position: absolute;
+            top: 45%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <img id="image" src="../Images/pic1.webp">
+        <button id="prev" onclick="previous()">❮</button>
+        <button id="next" onclick="next()">❯</button>
+    </div>
+
+    <script>
+        let images = [
+            "../Images/pic1.webp",
+            "../Images/pic2.webp",
+            "../Images/pic3.webp",
+            "../Images/pic4.webp",
+        
+            
+        ];
+
+        let index = 0;
+        function next() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            document.getElementById("image").src = images[index];
+        }
+        function previous() {
+            index--;
+            if (index < 0) {
+                index = images.length - 1;
+            }
+            document.getElementById("image").src = images[index];
+        }
+    </script>
+
+</body>
+</html>

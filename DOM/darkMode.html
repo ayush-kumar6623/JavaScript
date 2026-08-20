@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+
+        }
+        .outer{
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer" id="outer">
+        <button type="button" id="btn">Dark mode</button>
+        <h1>strdyf</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laboriosam minima, nobis sunt delectus quo placeat iusto neque eveniet. Odit fugiat iure ratione ea error sit unde veritatis est facere.>
+    </div>
+
+    <script>
+        let btn=document.getElementById("btn");
+        let outer=document.getElementById("outer");
+
+        btn.onclick=()=>{
+            if(btn.innerText=="Dark Mode"){
+                btn.innerText="Light Mode"
+                outer.classList.add("dark")
+            }
+            else{
+                btn.innerText="Dark Mode"
+                outer.classList.remove("dark")
+            }
+        }
+    </script>
+</body>
+</html>

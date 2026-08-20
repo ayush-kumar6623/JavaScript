@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 200px;
+            border: 2px solid;
+        
+        }
+        /* #btn{
+            height: ;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Choose color</h1>
+    <div id="box"></div> <br><br>
+    <div id="btn"></div>
+
+    <script>
+        let color=[
+            "red","green","blue"
+        ]
+        color.forEach((item)=>{
+            let btn=document.getElementById("button")
+            let box=document.getElementById("box")
+            let btnContainer=document.getElementById("btn")
+            btn.onclick=()=>{
+                box.style.backgroundColor=item
+            }
+            btnContainer.appendChild(btn)
+        })
+    </script>
+
+</body>
+</html>

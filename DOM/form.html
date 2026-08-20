@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="handleSubmit()">
+        <input type="text" placeholder="enter name" id="name"/><br><br>
+        <p id="nameError"></p>
+        <input type="tel" placeholder="enter Phone number" id="phone"/><br><br>
+        <p id="phoneError"></p>
+        <input type="email" placeholder="enter Email" id="email"/><br><br>
+        <p id="emailError"></p>
+        <input type="password" placeholder="enter Password" id="password"/><br><br>
+        <p id="passwordError"></p>
+
+        <button type="submit">Click Me</button>
+    </form>
+
+    <script>
+
+        let myForm = document.getElementById('myForm')
+        let isError = true
+        myForm.addEventListener("submit",function(e){
+            // e.preventDefault()
+            let name = document.getElementById('name').value
+            let phone = document.getElementById('phone').value
+            let email = document.getElementById('email').value
+            let password = document.getElementById('password').value
+            if(name=="") {
+                document.getElementById('nameError').innerText="Name is required"
+                isError=true
+            }else{
+                document.getElementById('nameError').innerText=""
+                isError=false
+            }
+            if(phone.length<10) {
+                document.getElementById('numberError').innerText="Phone number should be 10 digits"
+                isError = true
+            }else{
+                document.getElementsById('nameError').innerText=""
+                isError=false
+            }
+             if(password.length<6){
+                document.getElementById('passError').innerText="password must be 6 digit required"
+                iserror=true
+            } else{
+                document.getElementsById('passError').innerText=""
+                isError=false
+            }
+            if(isError==false){
+                alert("Form submission")
+            }
+      
+        })
+
+    </script>
+</body>
+</html>

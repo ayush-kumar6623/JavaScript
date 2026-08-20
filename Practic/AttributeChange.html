@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <img id="photo" isrc="1.webp" alt="">
+    <img id="photo" src="1.webp" alt="">
+    <link rel="stylesheet" href="card.html" id="hh">
 
     <script>
         let photo=document.getElementById("photo")
+        photo.src="earBuds.webp"
+
+        //get Attribute
+        let link=document.getElementById("hh")
+        console.log(link.getAttribute("href"));
         
     </script>
 

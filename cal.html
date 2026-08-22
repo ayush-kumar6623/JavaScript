@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1e1e1e;
+            font-family: Arial, sans-serif;
+        }
+
+        .outer {
+            width: 330px;
+            padding: 20px;
+            background: #2b2b2b;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        #display {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            background: #111;
+            color: white;
+            font-size: 35px;
+            text-align: right;
+        }
+
+        .btns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .btns button {
+            height: 60px;
+            border: none;
+            border-radius: 12px;
+            background: #3a3a3a;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btns button:hover {
+            background: #505050;
+            transform: scale(1.05);
+        }
+
+        .btns button:active {
+            transform: scale(0.95);
+        }
+
+        /* AC & DEL */
+        .btns button:nth-child(1),
+        .btns button:nth-child(2) {
+            background: #d9534f;
+        }
+
+        .btns button:nth-child(1):hover,
+        .btns button:nth-child(2):hover {
+            background: #c9302c;
+        }
+
+        /* Operators */
+        .btns button:nth-child(3),
+        .btns button:nth-child(4),
+        .btns button:nth-child(8),
+        .btns button:nth-child(12),
+        .btns button:nth-child(16) {
+            background: #f39c12;
+        }
+
+        .btns button:nth-child(3):hover,
+        .btns button:nth-child(4):hover,
+        .btns button:nth-child(8):hover,
+        .btns button:nth-child(12):hover,
+        .btns button:nth-child(16):hover {
+            background: #e67e22;
+        }
+
+        /* Equal Button */
+        .btns button:nth-child(20) {
+            background: #27ae60;
+        }
+
+        .btns button:nth-child(20):hover {
+            background: #219150;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer">
+
+        <input type="text" placeholder="0" 
+            id="display" 
+            readonly
+        >
+
+        <div class="btns">
+
+            <button onclick="AllClear()">AC</button>
+            <button onclick="backSpace()">DEL</button>
+            <button onclick="press('%')">%</button>
+            <button onclick="press('/')">/</button>
+
+            <button onclick="press('9')">9</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('7')">7</button>
+            <button onclick="press('*')">X</button>
+
+            <button onclick="press('6')">6</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('4')">4</button>
+            <button onclick="press('-')">-</button>
+
+            <button onclick="press('3')">3</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('1')">1</button>
+            <button onclick="press('+')">+</button>
+
+            <button onclick="press('0')">0</button>
+            <button onclick="press('00')">00</button>
+            <button onclick="press('.')">.</button>
+            <button onclick="result()">=</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        let display = document.getElementById('display');
+
+        // Number / Operator
+        function press(x) {
+            display.value += x;
+        }
+
+        // All Clear
+        function AllClear() {
+            display.value = "";
+        }
+
+        // Delete Last Character
+        function backSpace() {
+            display.value = display.value.slice(0, -1);
+        }
+
+        // Calculate Result
+        function result() {
+            try {
+                display.value = eval(display.value);
+            }
+            catch(error) {
+                display.value = "Error";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

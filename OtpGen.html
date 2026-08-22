@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="otpArea">OTP</p>
+
+    <input type="text" id="otp">
+    <button onclick="verify()">Verify</button>
+    <button onclick="generateOtp()">Resend</button>
+
+    <script>
+        let otp;
+        let otpArea=document.getElementById('otpArea')
+
+        function generateOtp(){
+            otp=Math.floor(Math.random()*100000)
+            otpArea.innertext=otp
+        }
+
+        function Verify(){
+            let userOtp=document.getElementById('otp')
+            if(userOtp.value==otp){
+                alert("verified")
+            }
+            else{
+                alert('not verified')
+            }
+        }
+    </script>
+</body>
+</html>

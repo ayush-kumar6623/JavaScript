@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">00</h1>
+
+    <button onclick="demo()">Click Me</button>
+
+    <script>
+        let count = 0;
+        let timmer =setInterval(()=>{
+            count++
+            if(count<50){
+                document.getElementById("h1").innerText=`${count}+`
+            }
+            else{
+                clearInterval(timmer)
+            }
+        },100)
+
+        function demo(){
+            console.log("click");
+
+            setTimeout(()=>{
+                alert("Hello user")
+            },1000)
+            
+        }
+    </script>
+</body>
+</html>

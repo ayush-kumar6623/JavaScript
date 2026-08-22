@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordance</title>
+    <style>
+        .container{
+        
+            height: 100vh;
+            width: 100%;
+        }
+        .html{
+            height: 100px;
+            width: 30%;
+            background-color: red;
+            font-size: 80px;
+        }
+        .css{
+            height: 100px;
+            width: 30%;
+            background-color: blue;
+            font-size: 80px;
+        }           
+        
+        .js{
+            height: 100px;
+            width: 30%;
+            background-color: green;
+            font-size: 80px;
+        }   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="showContent('html')">HTML</button>
+        <div class="html" style="display: none;">HyperText Markup Language</div>
+
+        <button onclick="showContent('css')">CSS</button>
+        <div class="css" style="display: none;">Cascading Style Sheets </div>
+
+        <button onclick="showContent('js')">JavaScript</button>
+        <div class="js" style="display: none;">JavaScript is used for creating interactive web pages</div>
+    </div>
+    <script>
+        function showContent(content) {
+            let html = document.querySelector('.html');
+            let css = document.querySelector('.css');
+            let js = document.querySelector('.js');
+
+            html.style.display = 'none';
+            css.style.display = 'none';
+            js.style.display = 'none';
+
+            if (content === 'html') {
+                html.style.display = 'block';
+            } else if (content === 'css') {
+                css.style.display = 'block';
+            } else if (content === 'js') {
+                js.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

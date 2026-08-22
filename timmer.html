@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h2"></h2>
+    <h1 id="h1"></h1>
+
+    <script>
+        let h2=document.getElementById("h2")
+        let h1=document.getElementById("h1")
+
+        let count=0;
+
+        let timmer=setInterval(()=>{
+            count++
+            h2.innerText=count
+            h1.innerText=count
+            if(count==10){
+                clearInterval(timmer)
+            }
+        },100)
+    </script>
+</body>
+</html>

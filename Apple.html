@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            height: 100px;
+            width: 100%;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .active{
+            background-color: red;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header" id="header">
+            <button id="a" type="button" class="active" onclick="btnA()">Button A</button>
+            <button id="b" type="button" onclick="btnB()">Button B</button>
+            <button id="c" type="button" onclick="btnC()">Button C</button>
+        </div>
+        <img src="" id="mainImage" alt="">
+    </div>
+
+    <script>
+
+    let image=document.getElementById('mainImage')
+    let a=document.getElementById("a")
+    let b=document.getElementById("b")
+    let c=document.getElementById("c")
+
+    function btnA(){
+        image.src="Apple.webp"
+        a.classList.add("active");
+        b.classList.remove("active");
+        c.classList.remove("active");
+        
+        
+        
+        
+    }
+     function btnB(){
+        image.src="ball.webp"
+        a.classList.remove("active");
+        b.classList.add("active");
+        c.classList.remove("active");
+    }
+     function btnC(){
+        image.src="cat.webp"
+        c.classList.add("active");
+        b.classList.remove("active");
+        a.classList.remove("active");
+    }
+
+    </script>
+    
+</body>
+</html>

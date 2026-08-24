@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="createOtp()">
+
+    <p id="otp"></p>
+    <button type="button" onclick="createOtp()" disabled id="btn">Resend</button>
+
+    <script>
+        let otp=document.getElementById('otp')
+        let msg=document.getElementById('msg')
+        let btn=document.getElementById('btn')
+
+        function createOtp(){
+            let code =Math.floor(Math.random()*10000)
+            console.log(code);
+            otp.innerText=code
+        }
+        let time=60;
+            let timmer=setInterval(()=>{
+            msg.innerText="Resnd otp" + time-- + "sec"
+            if(time==0){
+                clearInterval(timmer)
+                msg.innerText="Resend"
+                btn.removeAttribute('disabled')
+            }
+        },1000)
+
+    </script>
+    
+</body>
+</html>

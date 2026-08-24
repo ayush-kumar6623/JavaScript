@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Callback</h1>
+
+    <button type="button"   onclick="greet(sayHello)" >hello</button>
+    <button type="button"  onclick="greet(sayBye)" >bye</button>
+
+    <script>
+        function greet(Callback){
+            console.log("Hello world!");
+            setTimeout(Callback,1000)
+        }
+        function sayHello(){
+            console.log("Hello");
+            
+        }
+        function sayBye(){
+            console.log("Bye");
+            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter timer</title>
+</head>
+<body>
+    <center>
+    <h1>Counter timer </h1>
+    <p id="counter">0</p></center>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <button id="reset">Reset</button>
+      </center>
+
+  
+    <script>
+        let count = 0;
+        let counter = document.getElementById('counter');
+        let incrementButton = document.getElementById('increment');
+        let decrementButton = document.getElementById('decrement');
+        let resetButton = document.getElementById('reset');
+
+        incrementButton.addEventListener('click', incrementCounter);
+        decrementButton.addEventListener('click', decrementCounter);
+        resetButton.addEventListener('click', resetCounter);
+
+
+        function incrementCounter() {
+            count++;
+            counter.textContent = count;
+        }
+         function decrementCounter() {
+            count--;
+            counter.textContent = count;
+        }
+        function resetCounter() {
+            count = 0;
+            counter.textContent = count;
+        }
+    </script>
+
+     
+
+
+</body>
+</html>

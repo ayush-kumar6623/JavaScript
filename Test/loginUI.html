@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login UI</title>
+</head>
+<body>
+    <h1>Login </h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label >Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit" disabled >Login</button>
+    </form>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const loginButton = loginForm.querySelector('button[type="submit"]');
+
+        usernameInput.addEventListener('input', isLogin);
+        passwordInput.addEventListener('input', isLogin);
+
+        function isLogin() {
+            if (usernameInput.value && passwordInput.value) {
+                loginButton.disabled = false;
+            } else {
+                loginButton.disabled = true;
+            }
+        }
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+        
+            if (username === 'Ayush' && password === '12345') {
+                alert('Login successful!');
+            } else {
+                alert('Invalid username or password.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Largest Number</title>
+</head>
+<body>
+    <h1>Second Largest Number</h1>
+    <script>
+        function findSecondLargest(arr) {
+            let largest = 0;
+            let secondLargest = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    secondLargest = largest;
+                    largest = arr[i];
+                } else if (arr[i] > secondLargest && arr[i] !== largest) {
+                    secondLargest = arr[i];
+                }
+            }
+
+            return secondLargest;
+        }
+
+        const array = [12, 83, 1, 23, 35];
+        const secondLargest = findSecondLargest(array);
+        console.log("Second Largest Number:", secondLargest);
+    </script>
+</body>
+</html>

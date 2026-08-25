@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Search items
+    </h1>
+
+    <input type="text" id="search-Items" placeholder="Enter your Items ">
+    <ul id="item-List">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+        <li>Elderberry</li>
+        <li>Fig</li>
+        <li>Grape</li>
+    </ul>
+
+    <script>
+        const searchInput=document.getElementById("search-items")
+        const itemlist=document.getElementById("Item-List")
+
+        const listItem=document.querySelectorAll("li")
+
+        searchInput.addEventListener("input" , function(){
+            const itemSearh=searchInput.value.toLowercase()
+            items.forEach(item => {
+                let itemSearh=item.textContent.toLowercase()
+                if(itemText.include(itemlist)){
+                    item.style.display="block"
+                }
+                else{
+                    item.style.display="none"
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

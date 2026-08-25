@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Array Elements</title>
+</head>
+<body>
+    <h1>Sum of Array Elements</h1>
+    <script>
+        function sumOfArrayElements(arr) {
+            let sum = 0;
+            let oddNumbers = [];
+            let evenNumbers = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+                if (arr[i] % 2 === 0) {
+                    evenNumbers.push(arr[i]);
+                } else {
+                    oddNumbers.push(arr[i]);
+                }
+            }
+
+            return {
+                sum: sum,
+                oddNumbers: oddNumbers,
+                evenNumbers: evenNumbers
+            };
+        }
+
+        const array = [10, 25, 30, 45, 50];
+        const result = sumOfArrayElements(array);
+        console.log("Sum:", result.sum);
+        console.log("Odd Numbers:", result.oddNumbers);
+        console.log("Even Numbers:", result.evenNumbers);
+        </script>
+</body>
+</html>

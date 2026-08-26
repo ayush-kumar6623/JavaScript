@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 2);
+        }
+
+        .price {
+            font-size: 23px;
+            font-weight: bold;
+            color:black;
+        }
+
+        .card .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 40%;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .off {
+            position: absolute;
+            top: 35px;
+            left: 40px;
+            background-color: rgb(157, 148, 148);
+            color:black;
+            padding: 5px 23px;
+            border-radius: 50px;
+        }
+        .stars{
+            color: gold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap:5px;
+            margin-bottom:10px;
+
+        }
+        .rating{
+            color: black;
+            font-size: 20px;
+            background-color: yellow;
+            border-radius:10px;
+            padding: 5px 10px;
+            position:absolute;
+            left: 279px;
+            top: 251px;
+            
+           
+        }
+        .delPrice{
+            color: black;
+            font-weight: bold;
+            text-decoration: line-through;
+            font-size: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="img" src="https://imgs.search.brave.com/POAZ715XpSLmJCw_vEbAjZ4viMByAOYb7-Klg6CfoV8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9i/bGFjay1sZWF0aGVy/LXNwb3J0cy1zaG9l/LXdpdGgtdW5kb25l/LXNob2VsYWNlLWdl/bmVyYXRlZC1ieS1h/aV8xODg1NDQtMjU2/NDIuanBnP3NlbXQ9/YWlzX2h5YnJpZCZ3/PTc0MCZxPTgw" alt="Card Image" style="width:100%; border-radius: 5px;">
+        <span class="off">39% Off</span>
+        <p>Nike Air MX Super 2500 - White</p>
+        <div class="stars">
+            <span class="price">$499    </span>
+            <span class="delPrice" >$699</span>
+             <div class="stars">
+            &#9733; &#9733; &#9733; &#9733; &#9734; 
+        </div>
+        <span class="rating">5.0</span>  
+    </div>
+        <button onclick="addToCart()" class="btn">Add Cart</button>
+    </div>
+    <script>
+        function addToCart() {
+            alert("Item added to cart!");
+        }
+    </script>
+</body>
+</html>

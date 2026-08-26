@@ -3,46 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter timer</title>
+    <title>Document</title>
 </head>
 <body>
-    <center>
-    <h1>Counter timer </h1>
-    <p id="counter">0</p></center>
-    <button id="increment">Increment</button>
-    <button id="decrement">Decrement</button>
-    <button id="reset">Reset</button>
-      </center>
+    <h1 id="counter">0</h1>
 
-  
+    <button id="Increment">Increment</button>
+    <button id="Decrement">Decrement</button>
+    <button id="Reset">Reset</button>
+
     <script>
-        let count = 0;
-        let counter = document.getElementById('counter');
-        let incrementButton = document.getElementById('increment');
-        let decrementButton = document.getElementById('decrement');
-        let resetButton = document.getElementById('reset');
+        let count=0;
+        let counter=document.getElementById("counter")
+        let Increment=document.getElementById("Increment")
+        let Decrement=document.getElementById("Decrement")
+        let Reset=document.getElementById("Reset")
 
-        incrementButton.addEventListener('click', incrementCounter);
-        decrementButton.addEventListener('click', decrementCounter);
-        resetButton.addEventListener('click', resetCounter);
+        Increment.addEventListener("click",IncrementCounter)
+        Decrement.addEventListener("click",DecrementCounter)
+        Reset.addEventListener("click",resetCounter)
 
+        function IncrementCounter(){
+            count++
+            counter.textContent=count;
 
-        function incrementCounter() {
-            count++;
-            counter.textContent = count;
         }
-         function decrementCounter() {
-            count--;
-            counter.textContent = count;
+        function DecrementCounter(){
+            count--
+            counter.textContent=count;
+
         }
-        function resetCounter() {
-            count = 0;
-            counter.textContent = count;
+        function resetCounter(){
+            count=0;
+            counter.textContent=count;
+
         }
+
     </script>
-
-     
-
-
 </body>
 </html>

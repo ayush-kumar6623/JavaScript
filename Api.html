@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Users</title>
+</head>
+
+<body>
+
+    <input type="text" id="search" placeholder="Enter your name">
+
+    <br><br>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody id="table">
+        </tbody>
+
+    </table>
+
+    <script>
+
+        let data = [];
+
+        const fetchData = async () => {
+
+            try {
+
+                let res = await fetch(
+                    "https://jsonplaceholder.typicode.com/users"
+                );
+
+                data = await res.json();
+
+                showData(data);
+
+            } catch (error) {
+
+                console.log(error);
+
+            }
+        };
+
+
+        const showData = (data) => {
+
+            let table = document.getElementById("table");
+
+            table.innerHTML = data.map((user) => {
+
+                return `
+                    <tr>
+                        <td>${user.id}</td>
+                        <td>${user.name}</td>
+                        <td>${user.email}</td>
+                    </tr>
+                `
+
+            }).join("");
+
+        };
+
+
+        fetchData();
+
+
+        let search = document.getElementById("search");
+
+        search.addEventListener("input", () => {
+
+            let value = search.value.toLowerCase();
+
+            let result = data.filter((user) => {
+
+                return user.name.toLowerCase().includes(value);
+
+            });
+
+            showData(result);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

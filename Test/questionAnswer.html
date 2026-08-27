@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+
+
+    <h2>Quiz</h2>
+    <h3 id="question"></h3>
+    <div id="option" style="padding: 10px;"></div>
+    <button onclick="nextQ()">Next</button>
+    <script>
+        let  question = [
+            {
+                "question" : "What is the full form of HTML?",
+                "option" : ["Hyperlink Markup Language", "Hypertext Markup Language", "Hyper Markup Language", "html Markupm Language"],
+                "answers" : "Hypertext Markup Language"
+            },
+            {
+                "question": "What is the full form of CSS?",
+                "option": ["Computer Style Sheets", "Cascading Style Sheets","Creative Style Sheets","Colorful Style Sheets"],
+                "answers": "Cascading Style Sheets"
+            },
+
+            {
+            "question": "Which tag is used to create a paragraph in HTML?",
+            "option": ["<p>","<para>","<paragraph>","<text>"],
+            "answers": "<p>"
+            },
+
+            {
+            "question": "Which tag is used to create a hyperlink?",
+            "option": [
+                "<link>",
+            "<a>",
+            "<href>",
+            "<url>"
+            ],
+            "answers": "<a>"
+            },
+
+            {
+                "question": "Which property is used to change text color in CSS?",
+                "option": [
+                    "text-color",
+                    "font-color",
+                    "color",
+                    "foreground-color"
+                ],
+                "answers": "color"
+            },
+
+            {
+                "question": "Which HTML tag is used to insert an image?",
+                "option": [
+                    "<image>",
+                    "<img>",
+                    "<pic>",
+                    "<src>"
+                ],
+                "answers": "<img>"
+            },
+
+            {
+                "question": "Which CSS property is used to change the background color?",
+                "option": [
+                    "bgcolor",
+                    "background-color",
+                    "background",
+                    "color-background"
+                ],
+                "answers": "background-color"
+            },
+
+            {
+                "question": "Which tag is used to create an unordered list?",
+                "option": [
+                    "<ol>",
+                    "<li>",
+                    "<ul>",
+                    "<list>"
+                ],
+                "answers": "<ul>"
+            },
+
+            {
+                "question": "Which CSS property is used to make text bold?",
+                "option": [
+                    "font-style",
+                    "font-weight",
+                    "text-bold",
+                    "bold"
+                ],
+                "answers": "font-weight"
+            },
+
+            {
+                "question": "Which HTML tag is used for the largest heading?",
+                "option": [
+                    "<h6>",
+                    "<heading>",
+                    "<h1>",
+                    "<head>"
+                ],
+                "answers": "<h1>"
+            }
+        ]
+
+        let score = 0;
+        let index = 0;
+
+        function showQ() {
+            let q = question[index]
+            document.getElementById('question').innerText=q.question
+
+            q.option.forEach((option) => {
+                let btn = document.createElement('button')
+                let br = document.createElement('br');
+                btn.innerText=option
+                document.getElementById('option').appendChild(btn);
+                document.getElementById('option').appendChild(br);
+
+                btn.style.padding="10px"
+                btn.style.margin="10px"
+
+                
+                btn.onclick=function(){
+
+                    if(option==q.answers){
+                        score++
+                        btn.style.backgroundColor="green"
+                        btn.style.color="white"
+                    }
+                    else{
+                        btn.style.backgroundColor="red"
+                        btn.style.color="white"
+                    }
+                    document.querySelectorAll('#option button').forEach((b) => b.disabled=true)
+                }
+            })
+        }
+
+        
+
+
+        function nextQ() {
+            index++
+            if(index<question.length){
+                document.getElementById('option').innerHTML=""
+                showQ()
+            }
+            else{
+    
+                document.getElementById('option').innerHTML="Your Score is "+score+"/"+question.length
+            }
+        }
+        showQ()
+    </script>
+
+</body>
+</html>
